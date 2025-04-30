@@ -1,0 +1,41 @@
+/* styles.css */
+body {
+    background-image: url(image/pexels-krislucas90-3264504.jpg);
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 400px; /* Width of the animated box */
+    height: 400px; /* Height of the animated box */
+    background-color: #3498db; /* Background color of the box */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Prevent overflow of the image */
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: transform 0.5s ease; /* Animation transition */
+}
+
+.image {
+    width: 300%; /* Make the image take the full width of the box */
+    height: 300%; /* Make the image take the full height of the box */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+}
+
+.rotate {
+    animation: rotation 1s infinite linear; /* Rotation animation */
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
